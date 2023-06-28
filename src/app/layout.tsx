@@ -1,3 +1,4 @@
+import { FilterContextProvider } from "@/context/filterContext";
 import Header from "./components/Header/header";
 import "./globals.css";
 import { Saira } from "next/font/google";
@@ -20,8 +21,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={saira.className} suppressHydrationWarning={true}>
-                <Header />
-                {children}
+                <FilterContextProvider>
+                    <Header />
+                    {children}
+                </FilterContextProvider>
             </body>
         </html>
     );
