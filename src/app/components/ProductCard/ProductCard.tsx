@@ -1,4 +1,5 @@
 import formatCurrency from "@/utils/formatCurrency";
+import { formatPrice } from "@/utils/formatPrice";
 import { styled } from "styled-components";
 
 interface ProductCardProps {
@@ -62,7 +63,7 @@ export function ProductCard(props: ProductCardProps) {
       <div>
         <h3>{props.title}</h3>
         <div></div>
-        <p>{formatCurrency(props.price, "BRL")}</p>
+        <p>{formatPrice(props.price)}</p>
       </div>
     </Card>
   );
