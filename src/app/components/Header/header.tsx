@@ -2,8 +2,8 @@
 import React from "react";
 import { styled } from "styled-components";
 import { Saira_Stencil_One } from "next/font/google";
-import { HeaderInputSearchIcon } from "../HeaderInput/headerInput";
-import CartControl from "../CartControll/cartControl";
+import { HeaderInputSearchIcon } from "../HeaderInput/HeaderInput";
+import { CartControl } from "../CartControl/CartControl";
 
 const sairaStencil = Saira_Stencil_One({
     subsets: ["latin"],

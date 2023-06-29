@@ -1,23 +1,23 @@
 "use client";
 
-import React from "react";
-import FilterBayType from "../FilterBayType/filterBayType";
 import { styled } from "styled-components";
+import FilterByType from "../FilterByType/FilterByType";
+import { FilterByPriority } from "../FilterByPriority/FilterByPriority";
 
 interface FilterBarProps {}
 
 const FilterContainer = styled.div`
-    display: flex;
-    width: 100%;
-    align-items: start;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 `;
 
-const FilterBar = (props: FilterBarProps) => {
-    return (
-        <FilterContainer>
-            <FilterBayType />
-        </FilterContainer>
-    );
-};
-
-export default FilterBar;
+export function FilterBar(props: FilterBarProps) {
+  return (
+    <FilterContainer>
+      <FilterByType />
+      <FilterByPriority />
+    </FilterContainer>
+  );
+}

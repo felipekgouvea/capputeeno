@@ -11,7 +11,7 @@ const CartCount = styled.span`
     font-size: 10px;
 
     background-color: var(--delete--color);
-    color: #fff;
+    color: white;
 
     margin-left: -10px;
 `;
@@ -20,15 +20,13 @@ const Container = styled.div`
     position: relative;
 `;
 
-const CartControl: React.FC = () => {
-    // const { value } = useLocalStorage("cart-items");
+export function CartControl() {
+    // const { value } = useLocalStorage("cart-items", []);
 
     return (
-        <div>
+        <Container>
             <CartIcon />
             <CartCount>2</CartCount>
-        </div>
+        </Container>
     );
-};
-
-export default CartControl;
+}
